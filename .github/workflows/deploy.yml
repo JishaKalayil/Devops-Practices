@@ -1,11 +1,11 @@
 on:
-    workflow_dispatch
+  workflow_dispatch
   
-  env:
+env:
     targetEnv: dev
   
-  name: Azure Bicep
-  jobs:
+name: Azure Bicep
+jobs:
     build-and-deploy:
       runs-on: ubuntu-latest
       steps:
