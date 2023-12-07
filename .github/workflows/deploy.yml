@@ -1,9 +1,7 @@
 on:
     workflow_dispatch
-
 env:
     targetEnv: dev
-
 name: Azure Bicep
 jobs:
     build-and-deploy:
