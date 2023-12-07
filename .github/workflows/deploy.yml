@@ -21,7 +21,8 @@ on:
       - name: Run ARM deploy
         uses: azure/arm-deploy@v1
         with:
-          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          resourceGroupName: ${{ secrets.AZURE_RG }}
-          template: ./InfrastructureAsCode/main.bicep
-          parameters: environment=${{ env.targetEnv }}
+            scope: Resource Group
+            subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+            resourceGroupName: ${{ secrets.AZURE_RG }}
+            template: ./InfrastructureAsCode/main.bicep
+            parameters: environment=${{ env.targetEnv }}
